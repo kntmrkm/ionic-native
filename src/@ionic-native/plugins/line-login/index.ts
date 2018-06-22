@@ -4,6 +4,7 @@ import { Plugin, Cordova, IonicNativePlugin } from '@ionic-native/core';
 export interface LineLoginResponse {
   userID: number;
   displayName: string;
+  accessToken: string;
   pictureURL: string;
 }
 
@@ -29,7 +30,7 @@ export interface LineLoginResponse {
 @Injectable()
 export class LineLogin extends IonicNativePlugin {
   @Cordova()
-  initialize(): Promise<any> { return; }
+  initialize(param: {}): Promise<any> { return; }
 
   @Cordova()
   login(param: {}): Promise<LineLoginResponse> { return; }
